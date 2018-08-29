@@ -1,0 +1,47 @@
+\documentclass{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,left=2cm,right=2cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{polytechnique}
+
+\usepackage[french]{babel}
+
+\title{Rapport de stage}
+\author{Etienne Bonnafoux}
+\date{De juin à août 2018}
+
+\begin{document}
+
+% Page blanche numéroté : II
+\newpage
+\clearpage
+
+% Avant textes numéroté en chiffres romains à la suite du II précédent
+\include{remerciements}
+\clearpage
+\tableofcontents
+\listoffigures
+
+\include{introduction}
+\clearpage
+\include{cahierDesCharges}
+\clearpage
+\include{rapportTechnique}
+\clearpage
+\include{manuelUtilisation}
+\clearpage
+\include{rapportActivite}
+\clearpage
+\include{conclusion}
+\clearpage
+
+% Après textes numéroté en chiffres romains à partir de I
+\include{biblio-sitographie}
+\clearpage
+\include{tableDesAnnexes}
+\include{annexes}
+
+\end{document}
