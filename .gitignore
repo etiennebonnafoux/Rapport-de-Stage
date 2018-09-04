@@ -5,3 +5,5 @@
 *.toc
 *.lof
 *.gz
+*.out
+*.aux
