@@ -5,7 +5,7 @@
 \usepackage[a4paper,left=2cm,right=2cm,top=2.5cm,bottom=2cm]{geometry}
 \usepackage{pdfpages}
 \usepackage{hyperref}
-\usepackage{polytechnique}
+\usepackage[titlepage,twoside,fancysections,sectionmark]{polytechnique}
 \usepackage[french]{babel}
 \usepackage{graphicx}
 \usepackage{wrapfig}
@@ -22,15 +22,18 @@
 
 % Avant textes numéroté en chiffres romains à la suite du II précédent
 \input{resumeoperationnel.tex}
+\clearpage
 \input{remerciements.tex}
 \clearpage
 \tableofcontents
-
+\clearpage
 \input{intro.tex}
 \clearpage
 \input{entreprise.tex}
 \clearpage
 \input{analyseEntreprise.tex}
+\clearpage
+\input{bilanSocial.tex}
 \clearpage
 \input{mission.tex}
 \clearpage
@@ -39,11 +42,9 @@
 \input{enseignementPer.tex}
 \clearpage
 \input{conclusion.tex}
-\clearpage
 
 % Après textes numéroté en chiffres romains à partir de
 \clearpage
-\input{tableDesAnnexes.tex}
 \input{annexes.tex}
 
 \end{document}
