@@ -1,0 +1,37 @@
+\begin{figure}[h]
+\begin{tikzpicture}[node distance=1cm, auto]
+\tikzset{
+    mynode/.style={rectangle,rounded corners,draw=black, top color=white, bottom color=yellow!50,very thick, inner sep=1em, minimum size=3em, text centered},
+    mynodevert/.style={rectangle,rounded corners,draw=black, top color=white, bottom color=green!50,very thick, inner sep=1em, minimum size=3em, text centered},
+    myarrow/.style={->, >=latex', shorten >=1pt, thick},
+    myarrowargent/.style={->, >=latex', shorten >=1pt, thick,color=red},
+    mylabel/.style={text width=7em, text centered}
+}
+\node[mynode] (client) {Clients finaux};
+\node[mynode, right=2cm of client] (tailleur) {Tailleurs};
+\node[mynode, right=2cm of tailleur] (probespoke) {Probespoke};
+\node[mynode,right=2cm of probespoke] (atelier) {Atelier};
+
+\node[mynodevert,below=2cm of tailleur] (app) {Application};
+\node[mynodevert,below=2cm of probespoke] (serveur) {Serveur};
+
+\draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed]
+    (atelier.north) to node[auto, swap] {Costume}(probespoke.north);
+\draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed]
+    (probespoke.north) to node[auto, swap] {Costume vérifié}(tailleur.north);
+\draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed]
+    (tailleur.north) to node[auto, swap] {Présente le costume au client}(client.north);
+
+\draw[myarrow] (tailleur.south) to node[auto,swap] {Commande}  (app.north);
+\draw[myarrow] (probespoke.south) to node[auto,swap] {Contrôle}  (serveur.north);
+\draw[myarrow] (app.east) to node[auto,swap] {Transmet}  (serveur.west);
+\draw[myarrow] (serveur.east) to node[auto,swap] {Imprime la commande}  (atelier.south);
+
+\draw[myarrowargent] (client.east) to node[auto,swap] {paye} (tailleur.west);
+\draw[myarrowargent] (tailleur.east) to node[auto,swap] {paye}  (probespoke.west);
+\draw[myarrowargent] (probespoke.east) to node[auto,swap] {paye}  (atelier.west);
+
+\end{tikzpicture}
+\medskip
+\caption{Workflow de l'entreprise Probespoke}
+\end{figure}

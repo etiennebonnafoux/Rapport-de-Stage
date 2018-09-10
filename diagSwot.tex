@@ -1,0 +1,38 @@
+\newcommand{\texta}{Helpful \tiny (to achieve the objective)\par}
+\newcommand{\textb}{Harmful \tiny (to achieve the objective)\par}
+\newcommand{\textcn}{Internal origin \tiny (product\slash company attributes)\par}
+\newcommand{\textdn}{External origin \tiny (environment\slash market attributes)\par}
+\newcommand{\nodestrengths}{Strengths\\\begin{itemize}
+  \item Application de prise de mesure
+  \item Gestion informatisé des commandes
+\end{itemize}}
+\newcommand{\nodeweakness}{Weakness\\\begin{itemize}
+  \item Barière douanière
+  \item Mauvaise image de l'industrie textile en Asie
+\end{itemize}}
+\newcommand{\nodeopportunities}{Opportunities\\\begin{itemize}
+  \item Guerre commercial USA/Chine
+  \item Emergence de la classe moyenne asiatique
+\end{itemize}}
+\newcommand{\nodethreats}{Threats\\\begin{itemize}
+  \item Instabilité politique thailandaise
+\end{itemize}}
+\begin{tikzpicture}[
+    any/.style={draw,minimum width=8cm,minimum height=8cm,
+                 text width=2.5cm,align=left,outer sep=0pt},
+    header/.style={any,minimum height=1cm,fill=black!10},
+    leftcol/.style={header,rotate=90}
+]
+
+\matrix (SWOT) [matrix of nodes,nodes={any,anchor=center},
+                column sep=-\pgflinewidth,
+                row sep=-\pgflinewidth,
+                row 1/.style={nodes=header},
+                column 1/.style={nodes=leftcol},
+                inner sep=0pt]
+{
+          & {\texta} & {\textb} \\
+{\textcn} & {\nodestrengths} & {\nodeweakness} \\
+{\textdn} & {\nodeopportunities} & {\nodethreats} \\
+};
+\end{tikzpicture}
