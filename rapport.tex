@@ -1,4 +1,4 @@
-\documentclass[12pt]{report}
+       \documentclass[12pt]{article}
 
 %TODO table des annexes
 %TODO bonne renumerotation
@@ -10,6 +10,7 @@
 \usepackage{hyperref}
 \usepackage[titlepage,twoside,fancysections,sectionmark]{polytechnique}
 \usepackage[french]{babel}
+\usepackage{qrcode}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{tikz}
@@ -24,6 +25,8 @@
 \begin{document}
 \maketitle
 % Page blanche numéroté : II
+\newpage
+\strut
 \newpage
 \clearpage
 
@@ -52,6 +55,7 @@
 
 % Après textes numéroté en chiffres romains à partir de
 \clearpage
+\appendix
 \input{annexes.tex}
 
 \end{document}
