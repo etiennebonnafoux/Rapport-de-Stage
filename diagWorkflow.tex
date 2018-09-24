@@ -22,13 +22,13 @@
 \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed]
     (tailleur.north) to node[auto, swap] {Présente le costume au client}(client.north);
 
-\draw[myarrow] (tailleur.south) to node[auto,swap] {Commande}  (app.north);
+\draw[myarrow] (tailleur.south) to node[auto,swap] {Commandent}  (app.north);
 \draw[myarrow] (probespoke.south) to node[auto,swap] {Contrôle}  (serveur.north);
 \draw[myarrow] (app.east) to node[auto,swap] {Transmet}  (serveur.west);
 \draw[myarrow] (serveur.east) to node[auto,swap] {Imprime la commande}  (atelier.south);
 
-\draw[myarrowargent] (client.east) to node[auto,swap] {paye} (tailleur.west);
-\draw[myarrowargent] (tailleur.east) to node[auto,swap] {paye}  (probespoke.west);
+\draw[myarrowargent] (client.east) to node[auto,swap] {payent} (tailleur.west);
+\draw[myarrowargent] (tailleur.east) to node[auto,swap] {payent}  (probespoke.west);
 \draw[myarrowargent] (probespoke.east) to node[auto,swap] {paye}  (atelier.west);
 
 \end{tikzpicture}
